@@ -11,7 +11,6 @@
 
 const Header = () => {
     // Create div and inner elements
-    const container = document.querySelector('.header-container');
     const parentDiv = document.createElement('div');
     const pageDate = document.createElement('span');
     const headline = document.createElement('h1');
@@ -23,12 +22,11 @@ const Header = () => {
     temp.classList.add('temp');
 
     // Add text content to elements
-    date.textContent = 'MARCH 28, 2019';
+    pageDate.textContent = 'MARCH 28, 2019';
     headline.textContent = 'Lambda Times';
     temp.textConent = '98°';
 
     // Create component structure
-    container.appendChild(parentDiv);
     parentDiv.appendChild(pageDate);
     parentDiv.appendChild(headline);
     parentDiv.appendChild(temp);
@@ -36,3 +34,6 @@ const Header = () => {
     // Return component
     return parentDiv;
 };
+
+const headerContainer = document.querySelector('.header-container');
+headerContainer.appendChild(Header());

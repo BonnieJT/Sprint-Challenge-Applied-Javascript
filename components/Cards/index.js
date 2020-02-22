@@ -26,25 +26,25 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
     const bootstrapData = response.data.articles.bootstrap;
     bootstrapData.map((article) => {
         const newCardMaker = CardMaker(article)
-        container.appendChild(newCard);
+        container.appendChild(newCardMaker);
     });
 
     const javaSciptData = response.data.articles.javascript
     javaSciptData.map((article) => {
          const newCardMaker = CardMaker(article)
-         container.appendChild(newCard);
+         container.appendChild(newCardMaker);
     });
 
     const technologyData = response.data.articles.technology
     technologyData.map((article) => {
          const newCardMaker = CardMaker(article)
-         container.appendChild(newCard);
+         container.appendChild(newCardMaker);
     });
 
     const jqueryData = response.data.articles.jquery
     jqueryData.map((article) => {
         const newCardMaker = CardMaker(article)
-        container.appendChild(newCard);
+        container.appendChild(newCardMaker);
     });
 
     })
